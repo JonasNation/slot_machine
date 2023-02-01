@@ -1,4 +1,6 @@
 import random
+
+
 # This is a text based slot machine
 # The user will deposit how ever much money they want then bet on one of three lines of slot machine
 # Then a win will be determined
@@ -73,7 +75,7 @@ def slots():
         total_bet = bet * line
 
         if total_bet not in range(balance):
-            print("Insuficent funds can\'t cover bet.\n-- Current Balance: ${0} --\n-- Your bet: ${1} --".format(
+            print("Insufficient funds can\'t cover bet.\n-- Current Balance: ${0} --\n-- Your bet: ${1} --".format(
                 balance, total_bet))
         else:
             break
