@@ -4,7 +4,7 @@
 # the user can keep playing until they cash out or lose all their money
 
 
-# Collecting user input for money deposit and bet
+# Collecting user input for money deposit
 def deposit():
     while True:
         amount = input("What is your deposit amount? $")
@@ -22,3 +22,12 @@ def deposit():
 
 
 deposit()
+
+# main section
+
+
+def slots():
+    balance = deposit()
+
+
+slots()
