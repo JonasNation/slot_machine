@@ -3,12 +3,53 @@ import random
 
 # This is a text based slot machine
 # The user will deposit how ever much money they want then bet on one of three lines of slot machine
-# Then a win will be determined
+# Then a win will be determined by getting the amount of lines choosen in a row
 # the user can keep playing until they cash out or lose all their money
 
 MAX_LINES = 7
 MAX_BET = 100
 MIN_BET = 10
+
+ROWS = 7
+COLUMNS = 7
+
+# Symbols for the slot machine ********************************************************************
+synmol_count = {
+    'A': 7,
+    'B': 7,
+    'C': 7,
+    'D': 7
+}
+
+# Slot machine spin will randomly pick values
+
+
+def slot_maschine_spin(rows, cols, symbol):
+    all_symbols = []
+    for symbol, symbol_count in symbol.items():
+        for _ in range(symbol_count):
+            all_symbols.append(symbol)
+
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choice(current_symbols)
+            current_symbols.remove(value)
+            column.append(value)
+        columns.append(column)
+    return columns
+
+
+def print_slot_machine(columns):
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != len(columns) - 1:
+                print(column[row], "|")
+            else:
+                print(column[row])
+
 
 # Collecting user input for money deposit *********************************************************
 
