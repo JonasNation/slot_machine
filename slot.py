@@ -28,8 +28,6 @@ symbol_values = {
 }
 
 # determines what qualify as a winner
-
-
 def check_winner(columns, lines, bet, values):
     winnings = 0
     winning_lines = []
@@ -45,8 +43,6 @@ def check_winner(columns, lines, bet, values):
     return winnings, winning_lines
 
 # Slot machine spin will randomly pick values
-
-
 def slot_maschine_spin(rows, cols, symbols):
     all_symbols = []
     for symbol, symbol_count in symbols.items():
@@ -76,8 +72,6 @@ def print_slot_machine(columns):
 
 
 # Collecting user input for money deposit *********************************************************
-
-
 def deposit():
     while True:
         amount = input("What is your deposit amount? $")
@@ -93,8 +87,6 @@ def deposit():
     return amount
 
 # collecting bet from user ***********************************************************************
-
-
 def lines():
     # gets number of line for slot machine
     while True:
@@ -112,8 +104,6 @@ def lines():
     return lines
 
 # getting the bet from user **********************************************************************
-
-
 def get_bet():
     while True:
         bet = input("What is your bet? $")
@@ -130,8 +120,6 @@ def get_bet():
     return bet
 
 # main section ***********************************************************************************
-
-
 def slots(balance):
     line = lines()
     while True:
